@@ -22,40 +22,31 @@ import {
 
 const tiers = [
   {
-    name: "Basic Neural Link",
-    price: "49",
+    name: "Bitget / MEXC Referans Grubu",
+    price: "0",
     color: "cyber-blue",
     icon: Zap,
-    description: "Essential trading insights for beginners",
+    description: "Tamamen ücretsiz, Referans kodu ile kayıt olup iletişime geçmeniz yeterli, ardından gruba alımı ben gerçekleştireceğim.",
     features: [
       {
-        title: "Trading Intelligence",
+        title: "Topluluğa Şimdi Katılın",
         items: [
-          { icon: Brain, text: "Basic AI Analysis", highlight: "10 signals/day" },
-          { icon: Bot, text: "Market Trends", highlight: "Daily updates" },
-          { icon: Shield, text: "Risk Management", highlight: "Basic tools" },
-        ],
-      },
-      {
-        title: "Community Features",
-        items: [
-          { icon: Users, text: "Public Trading Room", highlight: "Basic access" },
-          { icon: MessageSquare, text: "Community Support", highlight: "Standard" },
-          { icon: Clock, text: "Strategy Updates", highlight: "Weekly" },
+          { icon: Users, text: "Bitget / MEXC Referans Grubu", highlight: "Basic access" },
+          { icon: MessageSquare, text: "Analiz ve topluluğun buluştuğu sohbet grubu", highlight: "Standard" },
         ],
       },
     ],
   },
   {
-    name: "Pro Quantum Access",
-    price: "149",
+    name: "Teknik Analiz Eğitimi",
+    price: "1000",
     color: "cyber-pink",
     icon: Star,
     popular: true,
-    description: "Advanced trading tools for serious traders",
+    description: "Kendinizi geliştirmek ve piyasada hayatta kalmak için eğitimli olmak önemli bir gerçek.",
     features: [
       {
-        title: "Enhanced Intelligence",
+        title: "Eğitim Koşulları",
         items: [
           { icon: Brain, text: "Advanced AI Analysis", highlight: "50 signals/day" },
           { icon: Bot, text: "Pattern Recognition", highlight: "Real-time" },
@@ -64,7 +55,7 @@ const tiers = [
         ],
       },
       {
-        title: "Premium Features",
+        title: "Gereksinimler ve Detaylar",
         items: [
           { icon: Users, text: "Private Trading Room", highlight: "24/7 access" },
           { icon: Phone, text: "Priority Support", highlight: "4h response" },
@@ -75,28 +66,19 @@ const tiers = [
     ],
   },
   {
-    name: "VIP Neural Core",
-    price: "499",
+    name: "VIP Sinyal",
+    price: "100",
     color: "cyber-yellow",
     icon: Crown,
-    description: "Elite access to our most powerful features",
+    description: "Beraber çalışma fırsatını yakalayın.",
     features: [
       {
-        title: "Quantum Intelligence",
+        title: "VIP Sinyal koşul ve detaylar",
         items: [
           { icon: Brain, text: "Quantum AI Engine", highlight: "Unlimited signals" },
           { icon: Rocket, text: "Predictive Analytics", highlight: "Real-time" },
           { icon: Bot, text: "Custom AI Training", highlight: "Personalized" },
           { icon: Shield, text: "Enterprise Security", highlight: "Military-grade" },
-        ],
-      },
-      {
-        title: "Elite Services",
-        items: [
-          { icon: Users, text: "1-on-1 Mentoring", highlight: "Weekly sessions" },
-          { icon: Phone, text: "24/7 Direct Line", highlight: "Instant access" },
-          { icon: Globe, text: "Global Markets", highlight: "Full access" },
-          { icon: Lock, text: "API Integration", highlight: "Unlimited" },
         ],
       },
     ],
@@ -106,11 +88,22 @@ const tiers = [
 export default function PricingFeatures() {
   return (
     <section id="pricing-features" className="relative py-32 overflow-hidden">
-      {/* Background effects */}
+      {/* Animated background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,255,249,0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(255,0,255,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,249,0.1)_0%,transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,255,0.1)_0%,transparent_70%)]"></div>
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,0,0.05)_50%,transparent_75%)] bg-[length:200%_200%] animate-gradient"></div>
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+            linear-gradient(to right, rgba(0,255,249,0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,0,255,0.1) 1px, transparent 1px)
+          `,
+            backgroundSize: "50px 50px",
+          }}
+        ></div>
       </div>
 
       <div className="container relative z-10 mx-auto px-4">

@@ -6,8 +6,8 @@ import { Zap, Star, Crown, Check } from "lucide-react"
 
 const plans = [
   {
-    name: "Basic Neural Link",
-    price: "49",
+    name: "Bitget / MEXC Referans",
+    price: "0",
     description: "Essential trading insights for beginners",
     icon: Zap,
     features: ["Daily Market Analysis", "Basic Trading Signals", "Community Chat Access", "Weekly Strategy Updates"],

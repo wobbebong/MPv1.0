@@ -12,8 +12,6 @@ export default function Home() {
       <main id="main-content" className="flex-grow">
         <Hero />
         <Features />
-        <Countdown />
-        <CTA />
       </main>
       <Footer />
     </div>

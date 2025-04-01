@@ -18,27 +18,27 @@ export default function MainNavbar({ activeRoute, additionalItems }: MainNavbarP
   const navItems: NavItem[] = [
     {
       href: "/",
-      label: "Home",
+      label: "Ana Sayfa",
       isActive: activeRoute === "/",
     },
     {
       href: "/feed",
-      label: "Analysis Feed",
+      label: "Analizler",
       isActive: activeRoute === "/feed",
     },
     {
       href: "/chart-analysis",
-      label: "Chart Analysis",
+      label: "Kendi Analizini Yap",
       isActive: activeRoute === "/chart-analysis",
     },
     {
       href: "/pricing",
-      label: "Pricing",
+      label: "Servisler",
       isActive: activeRoute === "/pricing",
     },
     {
       href: "/vip-info",
-      label: "VIP Info",
+      label: "VIP Sinyal Bilgi",
       isActive: activeRoute === "/vip-info",
     },
   ]

@@ -2,6 +2,7 @@ import MainNavbar from "../components/MainNavbar"
 import PricingHero from "../components/PricingHero"
 import PricingFeatures from "../components/PricingFeatures"
 import CustomPricingForm from "../components/CustomPricingForm"
+import Footer from "../components/Footer"
 
 export default function Pricing() {
   return (
@@ -10,7 +11,7 @@ export default function Pricing() {
       <main className="flex-grow">
         <PricingHero />
         <PricingFeatures />
-        <section id="custom-pricing" className="relative py-20 overflow-hidden">
+{/*         <section id="custom-pricing" className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-cyber-pink/5 to-transparent"></div>
           <div className="container relative z-10 mx-auto px-4">
             <h2
@@ -24,8 +25,9 @@ export default function Pricing() {
             </p>
             <CustomPricingForm />
           </div>
-        </section>
+        </section> */}
       </main>
+      <Footer/>
     </div>
   )
 }

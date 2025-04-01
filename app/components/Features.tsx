@@ -1,23 +1,23 @@
 "use client"
 
 import { useState } from "react"
-import { Cpu, Zap, Lock } from "lucide-react"
+import { Cpu, Zap, Lock, Book, MessageSquare, KeyRound } from "lucide-react"
 
 const features = [
   {
-    icon: <Cpu className="w-12 h-12 text-cyber-blue" />,
-    title: "Quantum AI",
-    description: "Powered by cutting-edge quantum algorithms",
+    icon: <MessageSquare className="w-12 h-12 text-cyber-blue" />,
+    title: "Bitget / MEXC Referans Grubu",
+    description: "Tamamen ücretsiz, referans kodum ile borsalardan kaıt olup gruplara katılabilirsiniz.",
   },
   {
-    icon: <Zap className="w-12 h-12 text-cyber-pink" />,
-    title: "Neural Boost",
-    description: "Enhance your cognitive abilities instantly",
+    icon: <Zap className="w-12 h-12 text-cyber-yellow" />,
+    title: "VIP Sinyal",
+    description: "VIP Sinyal grubuna katılmak ve detaylı bilgi için iletişime geçebilirsiniz.",
   },
   {
-    icon: <Lock className="w-12 h-12 text-cyber-yellow" />,
-    title: "Cyber Secure",
-    description: "Military-grade encryption for your data",
+    icon: <Book className="w-12 h-12 text-cyber-pink" />,
+    title: "Teknik Analiz Eğitimi",
+    description: "Grafiklere kendi yorumunuzu yapabilmek ve piyasada hayatta kalabilmek için eğitim almak en iyi seçenek olacaktır, detaylı bilgi için iletişime geçebilirsiniz.",
   },
 ]
 
@@ -27,12 +27,6 @@ export default function Features() {
   return (
     <section id="features" className="py-20 bg-gradient-to-b from-cyber-black to-gray-900">
       <div className="container mx-auto px-4">
-        <h2
-          className="text-3xl font-bold text-center mb-12 text-cyber-blue cyber-glitch"
-          data-text="Augmented Features"
-        >
-          Augmented Features
-        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
