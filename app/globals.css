@@ -1,0 +1,351 @@
+/* Import Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* Import Audiowide font */
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+/* Base styles */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+
+  /* Define custom properties for cyber colors */
+  --cyber-black: #0a0a0a;
+  --cyber-blue: #00fff9;
+  --cyber-pink: #ff00ff;
+  --cyber-yellow: #ffff00;
+  --cyber-green: #39ff14;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+/* Set default styles */
+body {
+  background-color: var(--cyber-black);
+  color: white;
+  font-family: system-ui, sans-serif;
+}
+
+/* Font classes */
+.font-cyber {
+  font-family: "Audiowide", cursive;
+}
+
+/* Cyberpunk grid background */
+.cyber-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(0, 255, 249, 0.1) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(to bottom, rgba(0, 255, 249, 0.1) 1px, transparent 1px) 0 0 / 20px 20px;
+  mask-image: radial-gradient(circle, transparent 0%, black 100%);
+}
+
+/* Utility classes for cyber colors */
+.bg-cyber-black {
+  background-color: var(--cyber-black);
+}
+.bg-cyber-blue {
+  background-color: var(--cyber-blue);
+}
+.bg-cyber-pink {
+  background-color: var(--cyber-pink);
+}
+.bg-cyber-yellow {
+  background-color: var(--cyber-yellow);
+}
+.bg-cyber-green {
+  background-color: var(--cyber-green);
+}
+
+.text-cyber-black {
+  color: var(--cyber-black);
+}
+.text-cyber-blue {
+  color: var(--cyber-blue);
+}
+.text-cyber-pink {
+  color: var(--cyber-pink);
+}
+.text-cyber-yellow {
+  color: var(--cyber-yellow);
+}
+.text-cyber-green {
+  color: var(--cyber-green);
+}
+
+.border-cyber-black {
+  border-color: var(--cyber-black);
+}
+.border-cyber-blue {
+  border-color: var(--cyber-blue);
+}
+.border-cyber-pink {
+  border-color: var(--cyber-pink);
+}
+.border-cyber-yellow {
+  border-color: var(--cyber-yellow);
+}
+.border-cyber-green {
+  border-color: var(--cyber-green);
+}
+
+/* Glitch text effect */
+.cyber-glitch {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-glitch::before,
+.cyber-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--cyber-black);
+}
+
+.cyber-glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--cyber-pink);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.cyber-glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--cyber-blue);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(17px, 9999px, 94px, 0);
+  }
+  5% {
+    clip: rect(33px, 9999px, 145px, 0);
+  }
+  10% {
+    clip: rect(100px, 9999px, 30px, 0);
+  }
+  15% {
+    clip: rect(20px, 9999px, 130px, 0);
+  }
+  20% {
+    clip: rect(71px, 9999px, 40px, 0);
+  }
+  25% {
+    clip: rect(86px, 9999px, 128px, 0);
+  }
+  30% {
+    clip: rect(31px, 9999px, 130px, 0);
+  }
+  35% {
+    clip: rect(99px, 9999px, 7px, 0);
+  }
+  40% {
+    clip: rect(64px, 9999px, 89px, 0);
+  }
+  45% {
+    clip: rect(70px, 9999px, 30px, 0);
+  }
+  50% {
+    clip: rect(46px, 9999px, 146px, 0);
+  }
+  55% {
+    clip: rect(3px, 9999px, 11px, 0);
+  }
+  60% {
+    clip: rect(54px, 9999px, 63px, 0);
+  }
+  65% {
+    clip: rect(84px, 9999px, 88px, 0);
+  }
+  70% {
+    clip: rect(66px, 9999px, 135px, 0);
+  }
+  75% {
+    clip: rect(17px, 9999px, 79px, 0);
+  }
+  80% {
+    clip: rect(51px, 9999px, 55px, 0);
+  }
+  85% {
+    clip: rect(89px, 9999px, 140px, 0);
+  }
+  90% {
+    clip: rect(68px, 9999px, 56px, 0);
+  }
+  95% {
+    clip: rect(28px, 9999px, 46px, 0);
+  }
+  100% {
+    clip: rect(82px, 9999px, 37px, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(129px, 9999px, 36px, 0);
+  }
+  5% {
+    clip: rect(36px, 9999px, 4px, 0);
+  }
+  10% {
+    clip: rect(85px, 9999px, 66px, 0);
+  }
+  15% {
+    clip: rect(91px, 9999px, 91px, 0);
+  }
+  20% {
+    clip: rect(148px, 9999px, 138px, 0);
+  }
+  25% {
+    clip: rect(38px, 9999px, 122px, 0);
+  }
+  30% {
+    clip: rect(69px, 9999px, 54px, 0);
+  }
+  35% {
+    clip: rect(98px, 9999px, 71px, 0);
+  }
+  40% {
+    clip: rect(146px, 9999px, 34px, 0);
+  }
+  45% {
+    clip: rect(134px, 9999px, 43px, 0);
+  }
+  50% {
+    clip: rect(102px, 9999px, 80px, 0);
+  }
+  55% {
+    clip: rect(119px, 9999px, 44px, 0);
+  }
+  60% {
+    clip: rect(106px, 9999px, 99px, 0);
+  }
+  65% {
+    clip: rect(141px, 9999px, 74px, 0);
+  }
+  70% {
+    clip: rect(20px, 9999px, 78px, 0);
+  }
+  75% {
+    clip: rect(133px, 9999px, 79px, 0);
+  }
+  80% {
+    clip: rect(78px, 9999px, 52px, 0);
+  }
+  85% {
+    clip: rect(35px, 9999px, 39px, 0);
+  }
+  90% {
+    clip: rect(67px, 9999px, 70px, 0);
+  }
+  95% {
+    clip: rect(71px, 9999px, 103px, 0);
+  }
+  100% {
+    clip: rect(83px, 9999px, 40px, 0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 15s ease infinite;
+}
+
+/* Container utilities */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
